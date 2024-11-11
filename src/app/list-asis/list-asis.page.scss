@@ -1,0 +1,229 @@
+/* Variables globales */
+:root {
+    --primary-color: #00aeee;
+    --secondary-color: #f4f5f8;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border-radius: 10px;
+    --padding-standard: 16px;
+  }
+  
+  /* Estilos del contenido principal */
+  ion-content {
+    --background: var(--secondary-color);
+  }
+  
+  /* Estilos del header personalizado */
+  .header-container {
+    background: #ffffff;
+    padding: 20px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .header-container h1 {
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .back-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    height: 40px;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+  }
+  
+  .back-button ion-icon {
+    margin-right: 4px;
+    font-size: 24px;
+  }
+  
+  /* Grid y filtros */
+  ion-grid {
+    padding: var(--padding-standard);
+  }
+  
+  .filter-item {
+    --background: #ffffff;
+    --border-radius: var(--border-radius);
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-select {
+    --placeholder-color: var(--text-secondary);
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  ion-label {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  /* Botón de limpiar filtros */
+  .clear-filter-btn {
+    margin: 16px;
+    --background: var(--primary-color) !important;
+    --color: #ffffff !important;
+    --border-radius: 10px;  /* Aumentamos el border-radius para hacerlo más redondeado */
+    font-weight: 500;
+    text-transform: none;
+    font-size: 16px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Ajustamos la sombra para que coincida */
+  }
+  
+  /* Lista de asistencias */
+  ion-list {
+    background: transparent;
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+  
+  .attendance-item {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    margin-bottom: 12px;
+    --border-radius: var(--border-radius);
+    --background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendance-item ion-label {
+    margin: 8px 0;
+  }
+  
+  /* Estilos para el texto dentro de los items */
+  .attendance-item h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  
+  .attendance-item p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 4px 0;
+  }
+  
+  /* Efectos hover y active */
+  .attendance-item:hover {
+    --background: #f8f9fa;
+  }
+  
+  .clear-filter-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .back-button:hover {
+    --color: var(--primary-color);
+    opacity: 0.8;
+  }
+  
+  /* Estilos para los select */
+  ion-select::part(placeholder),
+  ion-select::part(text) {
+    color: var(--text-primary);
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 576px) {
+    .header-container h1 {
+      font-size: 20px;
+      padding-top: 15px;
+    }
+  
+    ion-grid {
+      padding: 12px;
+    }
+    
+    ion-list {
+      padding: 0 12px;
+    }
+    
+    .attendance-item h2 {
+      font-size: 16px;
+    }
+    
+    .attendance-item p {
+      font-size: 13px;
+    }
+  
+    .back-button {
+      top: 15px;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .attendance-item {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  /* Estilos para los estados de los elementos */
+  .item-interactive.ion-valid { 
+    --highlight-background: var(--primary-color);
+  }
+  
+  .item-interactive.ion-invalid {
+    --highlight-background: #ff4961;
+  }
+  
+  /* Estilos para el scroll */
+  ion-content::part(scroll) {
+    padding-bottom: 20px;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 20px;
+}
+
+.login-button {
+    --background: #00aeee !important;
+    --color: #ffffff !important;
+    --border-radius: 10px;  /* Aumentamos el border-radius para hacerlo más redondeado */
+    font-weight: 500;
+    text-transform: none;
+    font-size: 16px;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Ajustamos la sombra para que coincida */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Agregamos el estado hover y disabled para mantener consistencia */
+.login-button:hover {
+    --background: #009ed8 !important;  /* Un tono ligeramente más oscuro para el hover */
+}
+
+.login-button:disabled {
+    --background: #ccc !important;
+    --box-shadow: none;
+}

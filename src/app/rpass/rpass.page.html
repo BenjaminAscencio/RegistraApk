@@ -1,0 +1,37 @@
+
+<ion-content class="ion-padding">
+
+  <img src="../../assets/img/RegistrApp-10-11-2024.png" alt="">
+  
+  <form (ngSubmit)="changePassword()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña Actual</ion-label>
+      <ion-input type="password" [(ngModel)]="oldPassword" name="oldPassword" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nueva Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="newPassword" name="newPassword" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Nueva Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+    </ion-item>
+
+    <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="form-button submit-button">
+      Cambiar Contraseña
+    </ion-button>
+    </div>
+    
+  </form>
+  <ion-button expand="block" fill="clear" (click)="goToLogin()" class="form-button login-button">
+    ¿Ya tienes cuenta? Inicia sesión aquí
+  </ion-button>
+</ion-content>

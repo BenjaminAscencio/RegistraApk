@@ -1,0 +1,64 @@
+/* Centrado del formulario y estilo general */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que el formulario esté centrado en toda la página */
+  }
+  
+  form {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo para el formulario */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  .custom-input, .custom-select {
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .submit-button {
+    --background: #00aeee; /* Color de fondo para el botón */
+    --color: #fff; /* Texto blanco en el botón */
+    --border-radius: 5px;
+  }
+  
+  .submit-button:disabled {
+    --background: #ccc; /* Color gris cuando el botón está deshabilitado */
+  }
+  
+  .login-button {
+    color: #00aeee; /* Color del texto del botón de login */
+    --border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .error-text {
+    font-size: 0.8rem;
+    color: #00aeee;
+  }
+  
+  /* Ajustes para las sombras */
+  .form-item {
+    margin-bottom: 15px; /* Espaciado entre los campos */
+  }
+  
+    img {
+    width: 400px; /* Ajusta el tamaño de la imagen según lo necesites */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    display: block; /* Cambia el comportamiento de la imagen para que sea un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo de la imagen, si lo deseas */
+    }
+  
+  .name {
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .qr-container{
+    text-align: center;
+  }

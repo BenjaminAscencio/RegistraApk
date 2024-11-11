@@ -1,0 +1,39 @@
+
+<ion-content class="ion-padding">
+<br>
+  <img src="../../assets/img/RegistrApp-10-11-2024.png" alt="">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="getErrorMessage('email')">
+      {{ getErrorMessage('email') }}
+    </div>
+    <br>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="getErrorMessage('password')">
+      {{ getErrorMessage('password') }}
+    </div>
+    <br><br>
+    <div class="ion-padding" >
+    <ion-button expand="block" type="submit" [disabled]="loginForm.invalid || isLoading" class="form-button submit-button">
+      <ion-spinner name="circular" *ngIf="isLoading" class="spinner"></ion-spinner>
+      <span *ngIf="!isLoading">Iniciar Sesión</span>
+    </ion-button>
+    </div>
+
+    
+  </form>
+  <ion-button expand="block" fill="clear" (click)="goToRegister()" class="form-button login-button">
+    ¿No tienes cuenta? Regístrate
+  </ion-button>
+
+  <ion-button expand="block" fill="clear" (click)="goToRpass()" class="form-button login-button">
+    ¿Quieres cambiar tu contraseña?
+  </ion-button>
+</ion-content>

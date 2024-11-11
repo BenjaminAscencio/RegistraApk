@@ -1,0 +1,128 @@
+/* Variables globales */
+:root {
+  --primary-color: #00aeee;
+  --error-color: #ff4961;
+  --text-color: #000;
+  --background-transparent: transparent;
+  --white: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --overlay-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Estilos del formulario */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+/* Estilos de botones */
+.submit-button {
+  --background: var(--primary-color);
+  --color: var(--white);
+  --border-radius: 5px;
+}
+
+.submit-button:disabled {
+  --background: #ccc;
+}
+
+.login-button {
+  color: var(--primary-color);
+  --border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Estilos de imagen y texto */
+img {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.name {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 25px;
+  text-align: center;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+/* Estilos del scanner */
+.scanner-active {
+  --background: var(--background-transparent) !important;
+  --ion-background-color: var(--background-transparent) !important;
+}
+
+.scanner-container {
+  position: fixed;
+  inset: 0;
+  background: var(--background-transparent);
+  z-index: 2;
+}
+
+.scan-box {
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 100vmax var(--overlay-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  width: 300px;
+  z-index: 3;
+}
+
+/* Botón de detener scanner */
+.stop-scan-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  --background: var(--error-color);
+  --color: var(--white);
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  font-weight: bold;
+  z-index: 999;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.stop-scan-button ion-icon {
+  margin-right: 8px;
+}
+
+/* Ocultar elementos durante el escaneo */
+.hidden-on-scan.hide {
+  display: none !important;
+}
+
+ion-content.scanner-active {
+  background: var(--background-transparent) !important;
+}
+
+ion-content.scanner-active .hidden-on-scan {
+  display: none !important;
+}

@@ -1,0 +1,36 @@
+<ion-content [class.scanner-active]="scanActive" class="ion-padding">  
+  <div class="hidden-on-scan" [class.hide]="scanActive">
+    <br>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title><img src="../../assets/img/Bienvenido-10-11-2024.png" alt=""></ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="name">      
+        {{ nombre }}
+      </ion-card-content>
+    </ion-card>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="escanearQR()" class="form-button submit-button">
+        Escanear Código QR
+      </ion-button>
+    </div>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="logout()" class="form-button submit-button">
+        Cerrar Sesión
+      </ion-button>
+    </div>
+  </div>
+  <div *ngIf="scanActive" class="scanner-container">
+    <div class="scan-box"></div>
+    <ion-button 
+      (click)="stopScan()" 
+      class="stop-scan-button"
+      color="danger"
+      shape="round">
+      <ion-icon name="close-circle-outline"></ion-icon>
+      Detener Scanner
+    </ion-button>
+  </div>
+</ion-content>

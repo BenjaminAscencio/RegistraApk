@@ -1,0 +1,26 @@
+<ion-content class="ion-padding">  
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title><img src="../../assets/img/Bienvenido-10-11-2024.png" alt=""></ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="name">      
+      {{ nombre }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" (click)="seleccionarClaseYSeccion()" class="form-button submit-button">Seleccionar Clase y Sección</ion-button>
+
+  <br>
+  <div *ngIf="qrData" class="qr-container">
+    <h2>Clase: {{ claseSeleccionada }}</h2>
+    <h3>Sección: {{ seccionSeleccionada }}</h3>
+    <qrcode [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </div>
+
+  <ion-button expand="block" (click)="goTolist()" class="form-button submit-button">Ver Asistencia</ion-button>
+
+ 
+
+  <ion-button expand="block" (click)="logout()" class="form-button submit-button">Cerrar Sesión</ion-button>
+</ion-content>
